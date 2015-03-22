@@ -1,1 +1,1 @@
-ACTION=="change", SUBSYSTEM=="drm", ENV{HOTPLUG}=="1", RUN+="/etc/udev/scripts/monitor-detected-to-configure.sh"
+ACTION=="change", SUBSYSTEM=="drm", KERNEL=="card0" ENV{HOTPLUG}=="1", RUN+="/etc/udev/scripts/monitor-detected-to-configure.sh"
